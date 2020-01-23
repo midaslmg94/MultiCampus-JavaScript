@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+    <script>
+        /*
+            사용자로부터 숫자를 입력받아 숫자가 아닌 경우 콘솔에 오류메시지 출력, 숫자인 경우 홀/짝 여부 확인하여 출력
+        */
+        let num = prompt("숫자를 입력하세요");
+        num = Number(num);
+
+        /*
+            다른 모든 값과 달리 NaN은 같음 연산(==, ===)을 사용해서 판별할 수 없다.
+        */
+        if(isNaN(num)){ 
+            console.log("숫자가 아님");
+        }
+        else{
+            if(num%2==0)
+                console.log("짝수입니다");
+            else
+                console.log("홀수입니다");
+        }
+
+        // 삼항연산자
+        num%2===0?
+            console.log("짝수"):console.log("홀수");
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

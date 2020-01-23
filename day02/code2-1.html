@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <form action="서버페이지주소">
+        <br/>이름: <input type="text" name="name" />
+        <br/>나이: <input type="number" name="age" />
+        <br/>결혼 여부:
+            <input type="raido" name="married" value="Y"> 기혼
+            <input type="raido" name="married" value="N"> 미혼
+        <br/>거주지:
+            <select name="city">
+                <option value="seoul">서울</option>
+                <option value="busan">부산</option>
+                <option value="incheon" selected>인천</option>
+        </select>
+        <br/>좋아하는 색깔:
+            <input type="checkbox" name="favColor" value="red"> 빨강
+            <input type="checkbox" name="favColor" value="blue"> 파랑
+            <input type="checkbox" name="favColor" value="yellow"> 노랑
+        <br/><input type="submit" value="제출"/>
+    </form>
+    
+    
+    <script>
+    let inputNumber = prompt('숫자를 입력하세요');	// 사용자 입력을 받는 코드
+    console.log(inputNumber);				// 입력받은 값을 콘솔에 출력
+    alert(inputNumber);					// 입력받은 값을 사용자에게 알림
+    
+    let yn = confirm('1 + 2 = 3 이 맞습니까?');
+    console.log(yn);				// 확인을 클릭하면 true, 취소를 클릭하면 false를 반환
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
