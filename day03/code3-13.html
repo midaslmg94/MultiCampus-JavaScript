@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        // 클로저
+        function f(name){
+            let output=`hello ${name}`;
+            console.log("f()안 ",output);
+            return function(){console.log(output);};
+        }
+        let f1 = f('홍길동');
+        f1();
+        console.log("f()밖",output);
+
+        let f2 = f('리차드');
+        f2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

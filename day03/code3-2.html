@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            const startTime = new Date().getTime();
+            let cps = 0;
+            for(cps=0; new Date().getTime() < startTime+1000; cps++){
+
+            }
+            document.getElementById("display").innerText = `1초 동안 수행된 for loop의 횟수 : ${cps}`;
+        }
+    </script>
+</head>
+<body>
+    <div id="display"></div>
+</body>
+</html>

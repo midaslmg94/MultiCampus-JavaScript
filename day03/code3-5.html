@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1부터 사용자가 입력한 숫자 만큼의 합을 반환하는 함수
+        function sigma1(n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        // 함수표현식
+        let sigma2 = function (n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        };
+
+
+        // 화살표 함수 : 리액트에서 많이 쓰임
+        let sigma3 = (n) => {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+            return sum;
+        };
+
+        let num = prompt("숫자를 입력하세요");
+        console.log(`1부터~${num}까지의합은 ${sigma1(num)}입니다.`);
+        console.log(`1부터~${num}까지의합은 ${sigma2(num)}입니다.`);
+        console.log(`1부터~${num}까지의합은 ${sigma3(num)}입니다.`);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

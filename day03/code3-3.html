@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*window.onload = function(){
+            let fruits = ['사과', '딸기', '바나나', '배'];
+            console.log('for loop을 이용한 출력');
+            for(let i=0; i<fruits.length; i++){
+                console.log(fruits[i]);
+            }
+
+            console.log('for in을 이용한 출력');
+            for(let i in fruits){
+                console.log(fruits[i]);
+            }
+
+            console.log('forEach를 이용한 출력');
+            fruits.forEach(i=>{
+                console.log(fruits[i]);
+            });
+        }*/
+        window.onload = function () {
+            let output = '';
+            for (let i = 1; i <= 9; i++) {
+                output='';
+                for (let j = 1; j <= i; j++) {
+                    output+='*';
+                }
+                console.log(output);
+                document.getElementById("display").innerHTML += output+'<br>'; 
+            } // html에서 줄바꿈을 위해서는 br 태그를 쓴다
+        }
+        
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id ="display"></div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+        window.onload = function () {
+            let disp = document.getElementById("display");
+            let dan = prompt("몇 단을 출력할까요?", "2");
+            for (let num = 1; num <= 9; num++) {
+                disp.innerText += `${dan} X ${num} = ${dan*num} \t`;
+                disp.innerText += "\n";
+            }
+
+
+            for (let num = 1; num <= 9; num++) {
+                for (let dan = 2; dan <= 9; dan++) {
+                    disp.innerText += `${dan} X ${num} = ${dan*num} \t`;
+                }
+                disp.innerText += "\n";
+            }
+            let html = document.getElementById("html");
+            for (let num = 1; num <= 9; num++) {
+                for (let dan = 2; dan <= 9; dan++) {
+                    html.innerText += `<b>${dan}</b> X ${num} = ${dan*num} \t`;
+                }
+                html.innerText += "\n";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    안녕
+    <pre id="display"></pre>
+    <div id="html"></div>
+
+    안녕
+</body>
+
+</html>
