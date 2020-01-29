@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        let students = [];
+        students.push({ name: 'aaa', korean: 46, math: 65, english: 25, science: 64 });
+        students.push({ name: 'bbb', korean: 56, math: 63, english: 85, science: 62 });
+        students.push({ name: 'ccc', korean: 56, math: 63, english: 22, science: 43 });
+        students.push({ name: 'ddd', korean: 12, math: 25, english: 26, science: 23 });
+        students.push({ name: 'eee', korean: 18, math: 85, english: 25, science: 25 });
+        students.push({ name: 'fff', korean: 32, math: 22, english: 79, science: 25 });
+        students.push({ name: 'ggg', korean: 52, math: 26, english: 42, science: 42 });
+        students.push({ name: 'hhh', korean: 22, math: 25, english: 41, science: 56 });
+        students.push({ name: 'iii', korean: 87, math: 79, english: 25, science: 86 });
+        students.push({ name: 'jjj', korean: 24, math: 42, english: 71, science: 88 });
+        
+        //	학생별 총점, 평균점을 구하는 메소드를 추가
+        students.forEach(student=>{// 배열의 요소 하나를 가져옴
+            //console.log(student);
+            // 총점을 구하는 메소드 추가
+            student.getSum=function(){
+                return this.korean + this.english + this.math+this.science;
+            };
+            // 평균을 구하는 메소드 추가
+            student.getAvg=function(){
+                return this.getSum()/4;
+            };
+
+        });
+
+        //	학생별 총점, 평균점을 출력
+        students.forEach(student=>{
+            console.log(`이름:${student.name}, 총점:${student.getSum()}, 평균:${student.getSum()}`);
+            // with 키워드를 사용해서 출력
+            with(student){
+                console.log(`이름:${name},총점:${student.getSum()},평균:${student.getAvg()}`);
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

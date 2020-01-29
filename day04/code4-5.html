@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // in 키워드
+        let scores = {
+            C: 90,
+            Java: 80,
+            Python: 100
+        };
+        console.log(`score 객체에 Java 항목이 포함되어 있나요? ${'Java' in scores}
+        `);
+        console.log(`score 객체에 JavaScript 항목이 포함되어 있나요? ${'JavaScript' in scores}
+        `);
+
+        // 각 과목별 점수 출력 --> scores 객체의 원소가 많다면 이렇게 하는건 너무 불편함
+        console.log(`C:${scores.C}`);
+        console.log(`Java:${scores.Java}`);
+        console.log(`Python:${scores.Python}`);
+
+        // with 키워드
+        with(scores) {
+            console.log(`C:${C}`);
+            console.log(`Java:${Java}`);
+            console.log(`Python:${Python}`);
+        }
+
+        // 제일 편한 for in 구문
+        for (let key in scores) {
+            console.log(`${key} : ${scores[key]}`);
+        }
+
+        // 객체에 속성을 집어 넣기 
+        console.log("#1", 'JavaScript' in scores);
+        scores.JavaScript = 100;
+        console.log("#2", 'JavaScript' in scores);
+
+        // 객체의 속성 변경
+        console.log("#3", scores.JavaScript);
+        scores.JavaScript = 50;
+        console.log("#4", scores.JavaScript);
+
+     
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

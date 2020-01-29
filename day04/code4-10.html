@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        // 기본 자료형의 값 복사 -- 깊은 복사
+        let oldValue=10;
+        let newValue=oldValue;
+        console.log(oldValue, newValue); // 10, 10
+        oldValue=100;
+        console.log(oldValue, newValue); // 100, 10
+        
+        // 참조 자료형의 참조 복사 -- 얕은 복사
+        let oldArray=[10,20];
+        let newArray=oldArray;
+        console.log(oldArray, newArray); // [10,20], [10,20]
+        oldArray[0]=100;
+        newArray[1]=999;
+        console.log(oldArray, newArray); // [100,999], [100,999]
+
+        // 객체 자료형의 복사 -- 얕은 복사
+        let oldObject = {name:'aa', age:53};
+        let newObject = oldObject;
+        console.log(oldObject, newObject);// {name:"aa", age:53} {name:"aa", age:53}
+
+        oldObject.name = 'bb';
+        newObject.age = 30;
+        console.log(oldObject, newObject); // {name:"bb", age:30} {name:"bb", age:30}
+    
+
+        // 서로간의 영향을 받지 않음
+        function cloneObject(obj){
+            let output={};
+            for(let key in obj){
+                output[key]=obj[key];
+            }
+            return output;
+        }
+        let oldObject2 = {name:'xyz', age:123};
+        let newObject2 = cloneObject(oldObject2);
+        console.log(oldObject2, newObject2);// {name:"xyz", age:123} {name:"xyz", age:123}
+
+        // 자기가 바꾼 값만 바뀜. 서로간에 영향을 미치지 않음
+        oldObject2.name='zzz';
+        newObject2.age=999;
+        console.log(oldObject2, newObject2);// {name:"zzz", age:123} {name:"xyz", age:999}
+        
+
+        
+        function cloneArray(arr){
+            let output=[];
+            for(let i of arr){
+                output.push(i);
+            }
+            return output;
+        }
+        let oldArray2 = [10, 20];
+        let newArray2 = cloneArray(oldArray2);
+        console.log(oldArray2, newArray2);
+        oldArray2[0]=100;
+        newArray2[1]=200;
+        console.log(oldArray2, newArray2);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

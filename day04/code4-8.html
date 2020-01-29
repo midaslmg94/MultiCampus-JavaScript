@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 함수로 만들어서 사용
+        function makeStudent(name, korean, math, english, science) {
+            let result = {
+                name: name,
+                korean: korean,
+                math: math,
+                english: english,
+                science: science,
+                getSum: function () {
+                    return this.korean + this.math + this.english + this.science;
+                },
+                getAvg: function () {
+                    return this.getSum() / 4;
+                }
+
+            };
+            return result;
+        };
+        let students = [];
+        students.push(makeStudent('aaa', 46, 65, 25, 64));
+        students.push(makeStudent('bbb', 56, 63, 85, 62));
+        students.push(makeStudent('ccc', 56, 63, 22, 43));
+        students.push(makeStudent('ddd', 12, 25, 26, 23));
+        students.push(makeStudent('eee', 18, 85, 25, 25));
+        students.push(makeStudent('fff', 32, 22, 79, 25));
+        students.push(makeStudent('ggg', 52, 26, 42, 42));
+        students.push(makeStudent('hhh', 22, 25, 41, 56));
+        students.push(makeStudent('iii', 87, 79, 25, 86));
+        students.push(makeStudent('jjj', 24, 42, 71, 88));
+
+        students.forEach(student => {
+            with(student) {
+                console.log(`이름:${name}, 총점:${getSum()}, 평균:${getAvg()}\n`);
+            }
+        })
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*배열과 객체*/
+        // 배열
+        let colors = ['빨강', '파랑', '노랑'];
+        console.log(colors);
+        console.log(colors[0]);
+        console.log(colors[1]);
+        console.log(colors[2]);
+
+        // 객체
+        let person = {
+            firstName: '길동',
+            lastName: '홍',
+            age: 23,
+            isMarried: false,
+            sex: 'male',
+            // 속성 이름에 공백이 들어가는 경우는 따옴표를 꼭 써야 한다.
+            'favorite colors': ['red', 'blue', 'black'],
+            hello: function () {
+                return ("안녕, 나는 홍길동이야");
+            },
+            getFullName: function (lastName) {
+                return lastName + this.firstName;
+            }
+
+        };
+        console.log(person);
+        console.log(person.firstName + person.lastName);
+        console.log(person['age']);
+        console.log(person.isMarried);
+        console.log(person.sex);
+        console.log(person['favorite colors']);
+        console.log(person['favorite colors'][0]);
+        console.log(person['favorite colors'][1]);
+        console.log(person.hello());
+        console.log(person.getFullName());
+        console.log(person.getFullName("박"));
+        
+        //  for in 구문을 이용해서 객체 내부를 출력
+        for (let key in person) {
+            console.log(`${key} : ${person[key]}`);
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
