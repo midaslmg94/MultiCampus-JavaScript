@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,28 @@
     <title>Document</title>
     <script>
         /*배열 : 하나의 배열에 다양한 자료형을 넣을 수 있다.*/
-        let arr = [273, 'string', true, function() {}, {}, [100,200] ];
+        let arr = [273, 'string', true, function () {}, {},
+            [100, 200]
+        ];
         //           숫자, 문자열, boolean, 함수,        객체, 배열       
 
 
         /*for each -- iterator 사용*/
 
         // 익명함수 사용
-        arr.forEach(function(item){
+        arr.forEach(function (item) {
             console.log(item);
         });
 
         arr.push("안녕하세염");
         // 화살표 함수 사용
-        arr.forEach(item=>console.log(item));
+        arr.forEach(item => console.log(item));
     </script>
 
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
